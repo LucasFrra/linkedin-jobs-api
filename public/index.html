@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet de recherche d'emploi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="loaderContainer" class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <h1>Recherche d'emploi</h1>
+    <form id="jobSearchForm" class="form-container">
+      <label for="keyword">Mot clé :</label>
+      <input type="text" id="keyword" name="keyword" required>
+
+      <label for="location">Lieu :</label>
+      <input type="text" id="location" name="location">
+
+      <label for="dateSincePosted">Date :</label>
+      <select id="dateSincePosted" name="dateSincePosted">
+        <option value="24hr">Dernières 24 heures</option>
+        <option value="past week">Dernière semaine</option>
+        <option value="past month">Dernier mois</option>
+      </select>
+
+      <label for="jobType">Type d'emploi :</label>
+      <select id="jobType" name="jobType">
+        <option value="full time">Temps plein</option>
+        <option value="part time">Temps partiel</option>
+        <option value="contract">Contrat</option>
+        <option value="temporary">Temporaire</option>
+        <option value="internship">Stage</option>
+        <option value="volunteer">Bénévolat</option>
+      </select>
+
+      <label for="remoteType">Travail à distance :</label>
+      <select id="remoteType" name="remoteType">
+        <option value="on site">Sur site</option>
+        <option value="remote">Télétravail</option>
+        <option value="hybrid">Hybride</option>
+      </select>
+
+      <label for="salary">Salaire :</label>
+      <input type="number" id="salary" name="salary">
+
+      <label for="experienceLevel">Niveau d'expérience :</label>
+      <select id="experienceLevel" name="experienceLevel">
+        <option value="internship">Stagiaire</option>
+        <option value="entry level">Débutant</option>
+        <option value="associate">Associé</option>
+        <option value="senior">Senior</option>
+        <option value="director">Directeur</option>
+        <option value="executive">Exécutif</option>
+      </select>
+
+      <label for="limit">Limite de résultats :</label>
+      <input type="number" id="limit" name="limit" value="10" min="1" max="100">
+
+      <label for="sortBy">Trier par :</label>
+      <select id="sortBy" name="sortBy">
+        <option value="recent">Plus récent</option>
+        <option value="relevance">Pertinence</option>
+      </select>
+
+      <button type="submit">Rechercher</button>
+    </form>
+
+    <div id="results" class="results-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

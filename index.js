@@ -3,7 +3,8 @@ const axios = require("axios");
 
 module.exports.query = (queryObject) => {
   const query = new Query(queryObject);
-  console.log(query.url(0));
+  const url = query.url(0);
+  console.log(url);
   return query.getJobs();
 };
 
@@ -175,7 +176,7 @@ function parseJobList(jobData) {
           .trim()
           .replace(/\n/g, "")
           .replaceAll(" ", "") || "";
-      const jobUrl = job.find(".base-card__full-link").attr("href") || "";
+      const jobUrl = job.find(".base-card__full-link").attr("href") || job.find(".base-card").attr("href") || ""; 
       return {
         position: position,
         company: company,

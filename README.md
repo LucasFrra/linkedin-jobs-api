@@ -1,11 +1,12 @@
 <div align="center">
- <h1> <img src="https://www.freepnglogos.com/uploads/linkedin-logo-design-30.png" width="80px"><br/>LinkedIn Jobs API</h1>
- <a href="https://itsvg.in" target="_blank"><img src="https://img.shields.io/badge/Creator-Vishwa%20Gaurav-blue"/></a> 
+ <h1> <img src="https://www.freepnglogos.com/uploads/linkedin-logo-design-30.png" width="80px"><br/>LinkedIn Jobs API Web Interface</h1>
+ <a href="https://itsvg.in" target="_blank"><img src="https://img.shields.io/badge/Creator-Vishwa%20Gaurav-blue"/></a>
+  <a href="https://itsvg.in" target="_blank"><img src="https://img.shields.io/badge/Creator-LucasFrra-blue"/></a>
  <img src="https://img.shields.io/npm/v/linkedin-jobs-api?label=%20"/>
  <img src="https://img.shields.io/npm/dt/linkedin-jobs-api">
  <img src="https://img.shields.io/snyk/vulnerabilities/github/VishwaGauravIn/linkedin-jobs-api"/>
  <img src="https://img.shields.io/badge/License-GPL%20v3-brightgreen"/>
- <img src="https://img.shields.io/github/languages/code-size/VishwaGauravIn/linkedin-jobs-api?logo=github">
+ <img src="https://img.shields.io/github/languages/code-size/LucasFrra/linkedin-jobs-api?logo=github">
 </div>
 
 ## Features
@@ -28,9 +29,6 @@ yarn add linkedin-jobs-api
 
 Include the package
 
-```
-const linkedIn = require('linkedin-jobs-api');
-```
 
 Basic Example:
 
@@ -80,10 +78,8 @@ query() accepts a _queryOptions_ object and returns an array of _Job_ objects.
 | salary      | _string_ - Salary range
 | jobUrl      | _string_ - URL of the job page
 
-## Contributing
+## Contributor
 
-Feel free to contribute!
-
-1. Fork the repository
-2. Make changes
-3. Submit a pull request
+Thanks to Vishwa Gaurav
+https://github.com/VishwaGauravIn/linkedin-jobs-api
+I simply took his project and turned it into a web interface.

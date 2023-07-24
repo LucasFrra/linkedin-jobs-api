@@ -6,6 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projet de recherche d'emploi</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon//android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon//favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon//favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+
 </head>
 
 <body>
@@ -13,9 +34,10 @@
     <div id="loaderContainer" class="loader-container">
       <div class="loader"></div>
     </div>
-    <h1>Recherche d'emploi</h1>
+    <img src="img/linkedin-logo.png" alt="Linkedin logo" class="title-image">
+    <h1>Extractions d'emplois sur Linkedin</h1>
     <form id="jobSearchForm" class="form-container">
-      <label for="keyword">Mot clé :</label>
+      <label for="keyword">Mot clé : <span class="required">*</span></label>
       <input type="text" id="keyword" name="keyword" required>
 
       <label for="location">Lieu :</label>
@@ -23,23 +45,26 @@
 
       <label for="dateSincePosted">Date :</label>
       <select id="dateSincePosted" name="dateSincePosted">
-        <option value="24hr">Dernières 24 heures</option>
+        <option value="past month" selected>Dernier mois</option>
         <option value="past week">Dernière semaine</option>
-        <option value="past month">Dernier mois</option>
+        <option value="24hr">Dernières 24 heures</option>
       </select>
 
       <label for="jobType">Type d'emploi :</label>
       <select id="jobType" name="jobType">
+        <option value="" selected disabled hidden>Choisir un type</option>
         <option value="full time">Temps plein</option>
         <option value="part time">Temps partiel</option>
         <option value="contract">Contrat</option>
-        <option value="temporary">Temporaire</option>
-        <option value="internship">Stage</option>
+        <option value="temporary">Travail Temporaire</option>
         <option value="volunteer">Bénévolat</option>
+        <option value="internship">Stage</option>
+
       </select>
 
       <label for="remoteType">Travail à distance :</label>
       <select id="remoteType" name="remoteType">
+        <option value="" selected disabled hidden>Choisir un type</option>
         <option value="on site">Sur site</option>
         <option value="remote">Télétravail</option>
         <option value="hybrid">Hybride</option>
@@ -50,6 +75,7 @@
 
       <label for="experienceLevel">Niveau d'expérience :</label>
       <select id="experienceLevel" name="experienceLevel">
+        <option value="" selected disabled hidden>Choisir un niveau</option>
         <option value="internship">Stagiaire</option>
         <option value="entry level">Débutant</option>
         <option value="associate">Associé</option>
@@ -58,13 +84,14 @@
         <option value="executive">Exécutif</option>
       </select>
 
-      <label for="limit">Limite de résultats :</label>
+      <label for="limit">Nombre de résultats :</label>
       <input type="number" id="limit" name="limit" value="10" min="1" max="100">
 
       <label for="sortBy">Trier par :</label>
       <select id="sortBy" name="sortBy">
+        <option value="relevance" selected>Pertinence</option>
         <option value="recent">Plus récent</option>
-        <option value="relevance">Pertinence</option>
+
       </select>
 
       <button type="submit">Rechercher</button>

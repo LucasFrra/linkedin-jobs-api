@@ -42,7 +42,14 @@ function displayResults(jobs) {
     jobDiv.classList.add('job');
 
     const title = document.createElement('h2');
-    title.textContent = job.position;
+    const linkk = job.jobUrl; // Assurez-vous que jobUrl est correctement défini
+
+    const link = document.createElement('a');
+    link.textContent = job.position;
+    link.target = '_blank';
+    link.href = linkk;
+
+    title.appendChild(link);
     jobDiv.appendChild(title);
 
     const company = document.createElement('p');
@@ -63,6 +70,7 @@ function displayResults(jobs) {
 
     const jobUrl = document.createElement('a');
     jobUrl.textContent = 'Voir l\'offre';
+    jobUrl.target = '_blank';
     jobUrl.href = job.jobUrl;
     jobDiv.appendChild(jobUrl);
 
